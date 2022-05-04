@@ -1,12 +1,10 @@
-# Ts-Bots
-
-
 import os
 import pytz
 import time
 import datetime
 
 from pyrogram import Client
+user_session_string = user_session_string
 
 user_session_string = os.environ.get("user_session_string")
 bots = [i.strip() for i in os.environ.get("bots").split(' ')]
@@ -15,6 +13,8 @@ status_message_ids = [int(i.strip()) for i in os.environ.get("status_message_id"
 api_id = int(os.environ.get("api_id"))
 api_hash = os.environ.get("api_hash")
 user_client = Client(user_session_string, api_id=api_id, api_hash=api_hash)
+
+#user_client = Client(session_name=str(user_session_string), api_id=api_id, api_hash=api_hash)
 
 
 def main():
