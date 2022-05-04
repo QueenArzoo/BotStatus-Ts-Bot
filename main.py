@@ -4,7 +4,6 @@ import time
 import datetime
 
 from pyrogram import Client
-user_session_string = user_session_string
 
 user_session_string = os.environ.get("user_session_string")
 bots = [i.strip() for i in os.environ.get("bots").split(' ')]
